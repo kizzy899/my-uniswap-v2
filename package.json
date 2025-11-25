@@ -1,0 +1,35 @@
+{
+  "name": "my-uniswap-v2",
+  "version": "1.0.0",
+  "description": "Factory与Pair合约在本地和 Sepolia 测试网的部署 && 测试 (Hardhat)",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "verify:sepolia": "hardhat verify --network sepolia"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@typechain/ethers-v5": "^10.2.1",
+    "@typechain/hardhat": "^6.1.6",
+    "chai": "^4.5.0",
+    "dotenv": "^17.2.3",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.8.0",
+    "hardhat": "^2.27.0",
+    "hardhat-gas-reporter": "^1.0.10",
+    "typechain": "^8.3.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "hardhat-deploy": "^0.11.23"
+  }
+}
